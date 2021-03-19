@@ -1,20 +1,15 @@
-const open = document.querySelector('.open');
-const close = document.querySelector('.close');
+const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
+const line1 = document.querySelector('.line-1')
+const line2 = document.querySelector('.line-2')
+const line3 = document.querySelector('.line-3')
 
-close.style.display='none';
-open.addEventListener('click',function(e){
-    nav.style.transform ='translate(0)';
-    close.style.display='block';
-    open.style.display='none';
-    
+
+hamburger.addEventListener('click',function(e){
+    nav.classList.toggle('down');
+    nav.classList.toggle('shadow');
+    line1.classList.toggle('rotate1')
+    line2.classList.toggle('hide')
+    line3.classList.toggle('rotate2')
 })
-close.addEventListener('click',function(e){
-    nav.style.transform ='translateY(-500px)';
-    close.style.display='none';
-    open.style.display='block';
-    
-})
-
-
 
